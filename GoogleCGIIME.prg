@@ -7,7 +7,7 @@
 '
 option strict
 
-var ver$="1.06"
+var ver$="1.07"
 var lf$=chr$(&h0A)
 var q$=chr$(&h22)
 var esc$=chr$(&h1b)
@@ -526,7 +526,7 @@ end
 '名前解決
 '==================================================
 def nslookup$(h$)
- var res$=system$("/usr/bin/host -t A "+h$+"p")
+ var res$=system$("/usr/bin/host -t A "+h$)
  var lfpos=instr(res$,lf$)
  if lfpos!=-1 then
   res$=left$(res$,lfpos)
